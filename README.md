@@ -53,7 +53,7 @@ Public and private keys are required in order to sign requests with Media CDN.  
 8. Select "REQUIRE_SIGNATURES"
 9. Next, select the Keyset name you created in step 2
 10. Click Done > Save > Update Service
-11. It will take ~2 minutes for the update to take effect.
+11. It should take ~2 minutes for the update to take effect.
 
 ![image](https://github.com/mikehansen20/google-media-cdn-signed-requests/assets/51237503/7bd66d48-680f-48b8-80fc-4b0725dc6ecd)
 
@@ -68,7 +68,11 @@ At the bottom of each code sample, there is a section to populate the variables 
 *Note: Not all of these values exist in each code sample because some are not required. Use the descriptions and values below as a guide depending on which signing method you are using.*
 
 - `private_key_string` - This is the base64 encoded value that you generated in step 1.3. 
-- `key_name` - This is the keyset name you created in step 2.3.  Example value: `first-keyset`
-- `url_prefix` - Consists of the protocol + hostname + path to sign. Example: `https://mediacdn.example.com/images/`
-- `expiration` - The value for when the signed URL should expire. Example: `datetime.datetime.utcfromtimestamp(1800022861)`
-- `filename` - The filename of the sample request. Example: `image.jpg`
+- `key_name` - This is the keyset name you created in step 2.3.
+  - Example: `first-keyset`
+- `url_prefix` - Consists of the protocol + hostname + path to sign.
+  - Example: `https://mediacdn.example.com/images/`
+- `expiration` - The Unix/epoch timestamp to keep the signed URL valid. Some time in the future.
+  - Example: `datetime.datetime.utcfromtimestamp(1800022861)`
+- `filename` - The filename of the sample request.
+  - Example: `image.jpg`
