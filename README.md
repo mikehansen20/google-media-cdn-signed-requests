@@ -67,11 +67,13 @@ At the bottom of each code sample, there is a section to populate the variables 
 
 *Note: Not all of these values exist in each code sample because some are not required. Use the descriptions and values below as a guide depending on which signing method you are using.*
 
-- `private_key_string` - This is the base64 encoded value that you generated in step 1.3. 
+- `private_key_string` - This is the base64 encoded value that you generated in step 1.3.
+- `original_url` - If signing individual URLs, this is the URL that you want to sign.
+  - Example: `https://mediacdn.example.com/image-path/image.jpg`
 - `key_name` - This is the keyset name you created in step 2.3.
   - Example: `first-keyset`
 - `url_prefix` - Consists of the protocol + hostname + path to sign.
-  - Example: `https://mediacdn.example.com/images/`
+  - Example: `https://mediacdn.example.com/image-path/`
 - `expiration` - The Unix/epoch timestamp to keep the signed URL valid. Some time in the future.
   - Example: `datetime.datetime.utcfromtimestamp(1800022861)`
 - `filename` - The filename of the sample request.
